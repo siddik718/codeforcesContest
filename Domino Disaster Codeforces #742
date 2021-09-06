@@ -1,0 +1,55 @@
+/**
+* Bismillahir Rahmanir Rahim
+* Author:  Abu Bakar Siddik(City University , Dhaka)
+**/
+#include<bits/stdc++.h>
+#define endl '\n'
+#define pb push_back
+#define sz(v) ((int)(v).size())
+#define all(x) (x.begin(),x.end())
+#define Auto(it,v) for(auto &it : v)
+#define rep(i,n) for(int i = 0;i<(n);i++)
+#define dbg(x) cout<<(#x)<<" = "<<(x)<<endl
+using ll = long long int;
+using namespace std;
+
+
+const int inf = 1e9+10;
+const ll INF = 1e18+10;
+const int SIZE = 1e6+10;
+const ll MOD = 1e9+7;
+
+int  SetBit (int n, int X){ return n | (1 << X);}
+int  ClearBit (int n, int X){ return n & ~(1 << X);}
+int  ToggleBit (int n, int X){ return n ^ (1 << X);}
+bool CheckBit (int n, int X){ return (bool)(n & (1 << X));}
+int countbit(int n) {return __builtin_popcount(n);}
+
+ll arr[SIZE];
+ll n,m,p,q,r,k,ans;
+
+void solve()
+{
+    string a;
+    cin >> n >> a;
+
+    for(int i = 0;i<a.size();i++)
+    {
+        if(a[i] == 'U' || a[i] == 'D')
+        {
+            cout << ( (a[i] == 'U')? 'D' : 'U' );
+        }
+        else
+            cout << a[i];
+    }
+    cout << endl;
+}
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);cout.tie(0);
+    int t,cnt = 1;cin >> t;
+    while(t--)
+        solve();
+    return 0;
+}
